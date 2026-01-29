@@ -1,0 +1,160 @@
+Perri Gish
+GGG201b,HW #1
+1/29/2026
+
+Q1: which variants are present in which samples?
+SAMPLE        LOCATION      REFERENCE           SAMPLE          NOTES
+
+SRR2584403_1  1329520       T                   G                 SNV
+SRR2584403_1  4141016       C                   A                 SNV
+
+SRR2584404_1  238917        G                   T                 SNV
+SRR2584404_1  806310        ATT                 AT                deletion (1bp)
+SRR2584404_1  1329520       T                   G                 SNV
+SRR2584404_1  4141016       C                   A                 SNV
+
+SRR2584405_1  15382         C                   T                 SNV
+SRR2584405_1  154497        T                   G                 SNV
+SRR2584405_1  254101        T                   G                 SNV
+SRR2584405_1  649522        C                   T                 SNV
+SRR2584405_1  692265        C                   T                 SNV
+SRR2584405_1  692268        A                   G                 SNV
+SRR2584405_1  708118        T                   C                 SNV
+SRR2584405_1  1176010       T                   G                 SNV
+SRR2584405_1  1503866       A                   C                 SNV
+SRR2584405_1  1680445       A                   T                 SNV
+SRR2584405_1  1680446       A                   T                 SNV
+SRR2584405_1  1733754       A                   T                 SNV
+SRR2584405_1  1996109       A                   T                 SNV, repeated in output 3x-> upstream of 3 genes (RS10040,RS10050,RS10065)
+SRR2584405_1  2000253       A                   T                 SNV, repeated in output 3x-> upstream of 2 genes (RS10040,RS10065), downstream of 1 (RS10050)
+SRR2584405_1  2020126       C                   G                 SNV
+SRR2584405_1  2103919       ACAGCCAGCCAGCCAGCCAGCCAGCCAGCCAG      ACAGCCAGCCAGCCAGCCAGCCAGCCAGCCAGCCAG      insertion (CCAG) at the end 
+SRR2584405_1  2296329       A                   C                 SNV
+SRR2584405_1  2330469       A                   T                 SNV
+SRR2584405_1  2330472       A                   T                 SNV
+SRR2584405_1  2416966       C                   T                 SNV
+SRR2584405_1  2671373       T                   G                 SNV
+SRR2584405_1  2671376       C                   A                 SNV
+SRR2584405_1  2682710       G                   C                 SNV
+SRR2584405_1  2682764       C                   T                 SNV
+SRR2584405_1  3090762       C                   A                 SNV
+SRR2584405_1  3090763       T                   G                 SNV
+SRR2584405_1  3268057       T                   C                 SNV
+SRR2584405_1  3351282       C                   T                 SNV, repeated in output 7x-> downstream of 7 genes (RS16545,RS16550,RS16555,RS16560,RS16565,RS16570,RS16575)
+SRR2584405_1  3509753       T                   C                 SNV
+SRR2584405_1  3568506       T                   G                 SNV
+SRR2584405_1  3762120       C                   A                 SNV
+SRR2584405_1  4029556       G                   T                 SNV
+SRR2584405_1  4029559       A                   C                 SNV
+SRR2584405_1  4192865       G                   A                 SNV, repeated in output 4x-> downstream of 4 genes (RS20630,RS20635,RS20640,RS20645)
+SRR2584405_1  4497049       T                   G                 SNV
+SRR2584405_1  4503866       T                   C                 SNV
+SRR2584405_1  4504217       G                   A                 SNV
+SRR2584405_1  4504253       G                   A                 SNV
+SRR2584405_1  4505396       T                   C                 SNV
+SRR2584405_1  4505407       G                   A                 SNV
+SRR2584405_1  4506070       A                   T                 SNV
+SRR2584405_1  4593578       C                   T                 SNV, repeated in output 3x-> downstream of 3 genes (RS22620,RS22625,RS22630)
+
+SRR2584857_1  920514        T                   C                 SNV
+SRR2584857_1  3931002       A                   C                 SNV
+SRR2584857_1  4141441       C                   T                 SNV
+SRR2584857_1  4202391       T                   G                 SNV
+SRR2584857_1  4530779       CACCCTAACCCT        CACCCTAACCCTAACCCT  insertion (AACCCT) at the end
+
+Q2: which variants are shared between two or more samples?
+C->A at 4141016 is shared between SRR2584403_1, SRR2584404_1
+T->G at 1329520 is shared between SRR2584403_1, SRR2584404_1
+
+Q3: are there any variants that stand out in terms of their likely biological impact?
+ATT->AT at 806310 and the insertion of CCAG at 2103919 both first stand out to me, as they create a sturctural varaiton in the genome. 
+SRR2584404_1  806310        ATT                 AT                deletion (1bp)
+SRR2584405_1  2103919       ACAGCCAGCCAGCCAGCCAGCCAGCCAGCCAG      ACAGCCAGCCAGCCAGCCAGCCAGCCAGCCAGCCAG      insertion (CCAG) at the end 
+
+The insertion of AACCCT at the end of the sequence at 4530779 also stands out to me, though since this insertion is a multiple of 3 it doesn't cause a 
+frameshift mutation like the previous two variants would.
+SRR2584857_1  4530779       CACCCTAACCCT        CACCCTAACCCTAACCCT  insertion (AACCCT) at the end
+
+Lastly, the variants found in the upstream or downstream regions of multiple genes also draw my attention. In particular, the variants found in close 
+proximity to the start of the gene could be effecting the gene's promoter (ie: A->T at 1996109 is 7bp from the gene).
+SRR2584405_1  1996109       A                   T                 SNV, repeated in output 3x-> upstream of 3 genes (RS10040,RS10050,RS10065)
+SRR2584405_1  2000253       A                   T                 SNV, repeated in output 3x-> upstream of 2 genes (RS10040,RS10065), downstream of 1 (RS10050)
+SRR2584405_1  3351282       C                   T                 SNV, repeated in output 7x-> downstream of 7 genes (RS16545,RS16550,RS16555,RS16560,RS16565,RS16570,RS16575)
+SRR2584405_1  4192865       G                   A                 SNV, repeated in output 4x-> downstream of 4 genes (RS20630,RS20635,RS20640,RS20645)
+SRR2584405_1  4593578       C                   T                 SNV, repeated in output 3x-> downstream of 3 genes (RS22620,RS22625,RS22630)
+
+
+
+APPENDIX
+VARIANTS AS DIRECTLY OUTPUT IN THE VEP TXT FILES: 
+ecoli_1329520_T/G	ecoli:1329520	G	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_4141016_C/A	ecoli:4141016	A	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+
+ecoli_238917_G/T	ecoli:238917	T	gene-ECB_RS01110	rna-ECB_RS01110	Transcript	upstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=938;STRAND=1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_806310_ATT/AT	ecoli:806310	-	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_1329520_T/G	ecoli:1329520	G	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_4141016_C/A	ecoli:4141016	A	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+
+ecoli_15382_C/T	ecoli:15382	T	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_154497_T/G	ecoli:154497	G	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_254101_T/G	ecoli:254101	G	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_649522_C/T	ecoli:649522	T	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_692265_C/T	ecoli:692265	T	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_692268_A/G	ecoli:692268	G	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_708118_T/C	ecoli:708118	C	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_1176010_T/G	ecoli:1176010	G	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_1503866_A/C	ecoli:1503866	C	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_1680445_A/T	ecoli:1680445	T	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_1680446_A/T	ecoli:1680446	T	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_1733754_A/T	ecoli:1733754	T	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_1996109_A/T	ecoli:1996109	T	gene-ECB_RS10040	rna-ECB_RS10040	Transcript	upstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=7;STRAND=-1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_1996109_A/T	ecoli:1996109	T	gene-ECB_RS10050	rna-ECB_RS10050	Transcript	upstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=1742;STRAND=1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_1996109_A/T	ecoli:1996109	T	gene-ECB_RS10065	rna-ECB_RS10065	Transcript	upstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=4151;STRAND=1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_2000253_A/T	ecoli:2000253	T	gene-ECB_RS10040	rna-ECB_RS10040	Transcript	upstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=4151;STRAND=-1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_2000253_A/T	ecoli:2000253	T	gene-ECB_RS10050	rna-ECB_RS10050	Transcript	downstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=2327;STRAND=1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_2000253_A/T	ecoli:2000253	T	gene-ECB_RS10065	rna-ECB_RS10065	Transcript	upstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=7;STRAND=1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_2020126_C/G	ecoli:2020126	G	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_2103919_ACAGCCAGCCAGCCAGCCAGCCAGCCAGCCAG/ACAGCCAGCCAGCCAGCCAGCCAGCCAGCCAGCCAG	ecoli:2103918-2103919	CCAG	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_2296329_A/C	ecoli:2296329	C	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_2330469_A/T	ecoli:2330469	T	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_2330472_A/T	ecoli:2330472	T	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_2416966_C/T	ecoli:2416966	T	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_2671373_T/G	ecoli:2671373	G	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_2671376_C/A	ecoli:2671376	A	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_2682710_G/C	ecoli:2682710	C	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_2682764_C/T	ecoli:2682764	T	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_3090762_C/A	ecoli:3090762	A	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_3090763_T/G	ecoli:3090763	G	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_3268057_T/C	ecoli:3268057	C	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_3351282_C/T	ecoli:3351282	T	gene-ECB_RS16545	rna-ECB_RS16545	Transcript	downstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=35;STRAND=-1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_3351282_C/T	ecoli:3351282	T	gene-ECB_RS16550	rna-ECB_RS16550	Transcript	downstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=190;STRAND=-1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_3351282_C/T	ecoli:3351282	T	gene-ECB_RS16555	rna-ECB_RS16555	Transcript	downstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=280;STRAND=-1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_3351282_C/T	ecoli:3351282	T	gene-ECB_RS16560	rna-ECB_RS16560	Transcript	downstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=490;STRAND=-1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_3351282_C/T	ecoli:3351282	T	gene-ECB_RS16565	rna-ECB_RS16565	Transcript	downstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=3581;STRAND=-1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_3351282_C/T	ecoli:3351282	T	gene-ECB_RS16570	rna-ECB_RS16570	Transcript	downstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=3699;STRAND=-1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_3351282_C/T	ecoli:3351282	T	gene-ECB_RS16575	rna-ECB_RS16575	Transcript	downstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=3844;STRAND=-1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_3509753_T/C	ecoli:3509753	C	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_3568506_T/G	ecoli:3568506	G	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_3762120_C/A	ecoli:3762120	A	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_4029556_G/T	ecoli:4029556	T	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_4029559_A/C	ecoli:4029559	C	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_4192865_G/A	ecoli:4192865	A	gene-ECB_RS20630	rna-ECB_RS20630	Transcript	downstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=3590;STRAND=1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_4192865_G/A	ecoli:4192865	A	gene-ECB_RS20635	rna-ECB_RS20635	Transcript	downstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=3429;STRAND=1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_4192865_G/A	ecoli:4192865	A	gene-ECB_RS20640	rna-ECB_RS20640	Transcript	downstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=339;STRAND=1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_4192865_G/A	ecoli:4192865	A	gene-ECB_RS20645	rna-ECB_RS20645	Transcript	downstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=35;STRAND=1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_4497049_T/G	ecoli:4497049	G	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_4503866_T/C	ecoli:4503866	C	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_4504217_G/A	ecoli:4504217	A	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_4504253_G/A	ecoli:4504253	A	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_4505396_T/C	ecoli:4505396	C	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_4505407_G/A	ecoli:4505407	A	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_4506070_A/T	ecoli:4506070	T	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_4593578_C/T	ecoli:4593578	T	gene-ECB_RS22620	rna-ECB_RS22620	Transcript	downstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=1735;STRAND=-1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_4593578_C/T	ecoli:4593578	T	gene-ECB_RS22625	rna-ECB_RS22625	Transcript	downstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=1856;STRAND=-1;SOURCE=ecoli-rel606.sorted.gff.gz
+ecoli_4593578_C/T	ecoli:4593578	T	gene-ECB_RS22630	rna-ECB_RS22630	Transcript	downstream_gene_variant	-	-	-	-	-	-	IMPACT=MODIFIER;DISTANCE=1971;STRAND=-1;SOURCE=ecoli-rel606.sorted.gff.gz
+
+ecoli_920514_T/C	ecoli:920514	C	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_3931002_A/C	ecoli:3931002	C	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_4141441_C/T	ecoli:4141441	T	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_4202391_T/G	ecoli:4202391	G	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
+ecoli_4530779_CACCCTAACCCT/CACCCTAACCCTAACCCT	ecoli:4530778-4530779	AACCCT	-	-	-	intergenic_variant	-	-	-	-	-	-	IMPACT=MODIFIER
